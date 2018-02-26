@@ -13,6 +13,16 @@ public abstract class MetodosSteve {
         return scanner.nextInt();
     }
     
+    public static float tomarFloat(){
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextFloat();
+    }
+    
+    public static double tomarDouble(){
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextDouble();
+    }
+    
     public static char tomarChar(){
         Scanner scanner = new Scanner(System.in);
         return (char) scanner.nextByte();

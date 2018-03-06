@@ -33,9 +33,86 @@ public class Main extends MetodosSteve{
      * @return true para continuar operando false para salir del programa.
      */
     public static boolean menu(char opcion){
-        return false;
+        int sumandoA, sumandoB, factorA , factorB, divisor,dividendo,numeroA, numeroB,numero;
+        if(opcion=='e'){
+              return false;
+        }
+        else{ 
+            if(opcion=='s'){
+                imprimir("Ingrese primer numero");
+                sumandoA = tomarInt();
+                imprimir("Ingrese segundo numero");
+                sumandoB = tomarInt();
+                imprimir(suma(sumandoA, sumandoB));
+            }
+            else{
+                if(opcion=='r'){
+                imprimir("Ingrese primer numero");
+                sumandoA = tomarInt();
+                imprimir("Ingrese segundo numero");
+                sumandoB = tomarInt();
+                imprimir(resta(sumandoA, sumandoB)); 
+                }
+                 
+                 else{
+                    if(opcion=='m'){   
+                        imprimir("Ingrese primer numero");                     
+                        factorA = tomarInt();
+                        imprimir("Ingrese segundo numero");
+                        factorB = tomarInt();                
+                        imprimir(multiplicacion(factorA, factorB)); 
+                    }
+                  
+                 else{
+                    if(opcion=='d'){
+                        imprimir("Ingrese primer numero");
+                        divisor = tomarInt();
+                        imprimir("Ingrese segundo numero");
+                        dividendo = tomarInt();
+                        imprimir(division(divisor, dividendo));  
+                    }
+                      
+                    else{
+                        if(opcion=='n'){
+                        imprimir("Ingrese primer numero");
+                        numeroA = tomarInt();
+                        imprimir("Ingrese segundo numero");
+                        numeroB = tomarInt();                 
+                        imprimir(menor(numeroA, numeroB));    
+                        }
+                          
+                        else{
+                            if(opcion=='y'){
+                            imprimir("Ingrese primer numero");
+                            numeroA = tomarInt();
+                            imprimir("Ingrese segundo numero");
+                            numeroB = tomarInt();
+                            imprimir(mayor(numeroA, numeroB));    
+                            }
+                            else{
+                                if(opcion=='a'){
+                                    imprimir("Ingrese numero");
+                                    numero = tomarInt();
+                                    imprimir(valorAbsoluto(numero));
+                                }
+                                  
+                                else{
+                                    imprimir("La opcion no es valida");}
+                                }
+                            }
+                        }
+                    }      
+                }
+            }
+        }
+           
+        return true;
     }
-    
+   
+        
+        
+        
+        
     /**
      * @param sumandoA
      * @param sumandoB

@@ -96,10 +96,22 @@ public class Main extends MetodosSteve{
                                     numero = tomarInt();
                                     imprimir(valorAbsoluto(numero));
                                 }
-                                  
                                 else{
+                                    if(opcion == 'p'){
+                                        imprimir("Ingrese primer numero");
+                                        numeroA = tomarInt();
+                                        imprimir("Ingrese segundo numero");
+                                        numeroB = tomarInt();
+                                        imprimir(potencia(numeroA, numeroB));      
+                                      }
+                                    
+                                    else{
                                     imprimir("La opcion no es valida");}
                                 }
+                                    
+                                }
+                                  
+                                
                             }
                         }
                     }      

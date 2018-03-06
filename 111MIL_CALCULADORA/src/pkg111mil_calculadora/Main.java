@@ -42,14 +42,7 @@ public class Main extends MetodosSteve{
      * @return suma de los parametros enteros. 
      */
     public static int suma(int sumandoA, int sumandoB){
-        imprimir("Ingrese el primer sumando. ");
-        sumandoA = tomarInt();
-        imprimir("Ingrese el segundo sumando. ");
-        sumandoB = tomarInt();
-        System.out.print(sumandoA + " + " + sumandoB);
-        sumandoA = sumandoA + sumandoB;
-        imprimir(" = "+ sumandoA);
-        return 0;
+        return sumandoA+sumandoB;
     }
     
     /**
@@ -58,14 +51,7 @@ public class Main extends MetodosSteve{
      * @return diferencia de los parametros enteros.
      */
     public static int resta(int sumandoA, int sumandoB){
-        imprimir("Ingrese el minuendo. ");
-        sumandoA = tomarInt();
-        imprimir("Ingrese el sustraendo. ");
-        sumandoB = tomarInt();
-        System.out.print(sumandoA + " - " + sumandoB);
-        sumandoA = sumandoA - sumandoB;
-        imprimir(" = "+ sumandoA);
-        return 0;
+        return sumandoA-sumandoB;
     }
     
     /**

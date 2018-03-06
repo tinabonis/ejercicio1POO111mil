@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pkg111mil_calculadora;
 
-/**
- *
- * @author steve-urbit
- */
 public class Main extends MetodosSteve{
 
     /**
@@ -49,6 +40,13 @@ public class Main extends MetodosSteve{
      * @return suma de los parametros enteros. 
      */
     public static int suma(int sumandoA, int sumandoB){
+        imprimir("Ingrese el primer sumando. ");
+        sumandoA = tomarInt();
+        imprimir("Ingrese el segundo sumando. ");
+        sumandoB = tomarInt();
+        System.out.print(sumandoA + " + " + sumandoB);
+        sumandoA = sumandoA + sumandoB;
+        imprimir(" = "+ sumandoA);
         return 0;
     }
     
@@ -58,6 +56,13 @@ public class Main extends MetodosSteve{
      * @return diferencia de los parametros enteros.
      */
     public static int resta(int sumandoA, int sumandoB){
+        imprimir("Ingrese el minuendo. ");
+        sumandoA = tomarInt();
+        imprimir("Ingrese el sustraendo. ");
+        sumandoB = tomarInt();
+        System.out.print(sumandoA + " - " + sumandoB);
+        sumandoA = sumandoA - sumandoB;
+        imprimir(" = "+ sumandoA);
         return 0;
     }
     

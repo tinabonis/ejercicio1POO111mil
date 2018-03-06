@@ -13,6 +13,7 @@ public class Main extends MetodosSteve{
             operacion = tomarChar();
         }
         while(menu(operacion));
+       
     }
     /**
      * Debe tomar la cantidad de valores enteros necesarios y
@@ -113,5 +114,26 @@ public class Main extends MetodosSteve{
      */
     public static int valorAbsoluto(int numero){
         return 0;
+    }
+    
+    /**
+     * 
+     * @param numeroA
+     * @param numeroB
+     * @return el primer numero potenciado al segundo
+     */
+    public static int potencia(int numeroA, int numeroB){
+        int i=0;
+        int resultado=1;
+        if(numeroB>=0){
+            for(i=0;i<numeroB;i++){
+            resultado*=numeroA;
+        }
+        }else{
+            imprimir("Resultado= 1/("+numeroA+"^"+numeroB*-1+")");
+            imprimir("El siguiente mensaje no corresponde:");
+        }
+        
+        return resultado;
     }
 }

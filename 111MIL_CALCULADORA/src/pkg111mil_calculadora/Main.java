@@ -185,7 +185,10 @@ public class Main extends MetodosSteve{
      * @return el valor absoluto del parametro 
      */
     public static int valorAbsoluto(int numero){
-        return 0;
+        if(numero<0){
+            numero= numero*-1;
+        }
+        return numero;
     }
     
     /**

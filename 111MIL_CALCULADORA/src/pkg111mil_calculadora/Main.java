@@ -7,6 +7,7 @@ public class Main extends MetodosSteve{
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
         char operacion;
         do{
             imprimir("Ingrese el codigo de la operacion:");
@@ -92,10 +93,18 @@ public class Main extends MetodosSteve{
      * @param numeroA
      * @param numeroB
      * @return el mayor de los dos parametros
+     * @autor:Gimena, Jose Luis.
      */
+    
     public static int mayor(int numeroA, int numeroB){
-        return 0;
+        if(numeroA < numeroB){
+            return numeroB;    
+        }
+        else{
+            return numeroA;        
+        }
     }
+
     
     /**
      * 

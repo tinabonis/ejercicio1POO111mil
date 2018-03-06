@@ -4,17 +4,18 @@ public class Main extends MetodosSteve{
 
     /**
      * @param args the command line arguments
-     */
+     *
+    */ 
     public static void main(String[] args) {
         // TODO code application logic here
-        
+
         char operacion;
         do{
             imprimir("Ingrese el codigo de la operacion:");
             operacion = tomarChar();
         }
         while(menu(operacion));
-       
+
     }
     /**
      * Debe tomar la cantidad de valores enteros necesarios y
@@ -138,7 +139,12 @@ public class Main extends MetodosSteve{
      * @return multiplicacion de los parametros enteros 
      */
     public static int multiplicacion(int factorA, int factorB){
-        return 0;
+        
+        int resultado=0;
+        resultado= factorA*factorB;
+        imprimir(  "La multiplicacion de " +factorA+" * "+factorB+ " = "+resultado );
+        
+        return resultado;
     }
     
     /**
@@ -148,7 +154,17 @@ public class Main extends MetodosSteve{
      * @return division entre divisor y dividendo 
      */
     public static int division(int divisor, int dividendo){
-        return 0;
+        
+        int resultado=0;
+        if(dividendo==0)
+            {
+                imprimir("Operacion invalida ");
+                return 0;
+            }
+        resultado= divisor/dividendo;
+        imprimir( "la division de " +divisor+ " / " +dividendo+" = " +resultado );
+        
+        return resultado;
     }
     
     /**

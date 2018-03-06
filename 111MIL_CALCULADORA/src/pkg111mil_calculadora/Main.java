@@ -176,7 +176,13 @@ public class Main extends MetodosSteve{
      * @return el menor de los dos parametros
      */
     public static int menor(int numeroA, int numeroB){
-        return 0;
+       int menor;
+        if(numeroA<numeroB){
+            menor=numeroA;
+        }else{
+            menor=numeroB;
+        }
+        return menor;
     }
     
     /**

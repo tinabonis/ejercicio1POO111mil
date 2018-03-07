@@ -1,5 +1,7 @@
 package pkg111mil_ruleta;
 
+import java.util.Random;
+
 public class Main extends MetodosSteve {
     
     public static void main(String[] args) {
@@ -41,7 +43,9 @@ public class Main extends MetodosSteve {
     }
     
     public static int girarRuleta(){
-        return -1;
+        Random rn = new Random();
+        int bola = rn.nextInt(36);
+        return bola;
     }
     
     public static int[] apuestaPleno(int numero, int cantFichas){

@@ -3,7 +3,7 @@ package pkg111mil_ruleta;
 public class Main extends MetodosSteve {
     
     public static void main(String[] args) {
-        char operacion;
+       char operacion;
         do{
             imprimir("Ingrese el codigo de la operacion:");
             operacion = tomarChar();
@@ -68,10 +68,38 @@ public class Main extends MetodosSteve {
         return null;
     }
     
+    /**
+     * Esta funciopn sirve para calcular las ganacias para una apuesta de mitad.
+     * @param mitad
+     * @param cantFichas
+     * @return 
+     */
     public static int[] apuestaMitad(int mitad, int cantFichas){
-        return null;
+        int [] tablero=new int[37];
+        int mitad1=1;
+        int mitad2=2;
+        if (mitad==1||mitad==2 ){ 
+               
+            if(mitad==mitad1){
+            for(int i = 1; i <19 ; i++){
+                tablero[i]=cantFichas*2;
+            }
+            }
+            else if(mitad==mitad2){
+                 for(int i = 19; i <37 ; i++){
+                tablero[i]=cantFichas*2;
+            }              
+        }
+        for (int i = 0; i < 37; i++) {
+                imprimir(i+ " "+ tablero[i]);  
+                }
     }
-    
+         else{
+             imprimir("mitad incorrecta ");
+            }
+    return tablero;
+    }
+   
     public static int[] apuestaParImpar(boolean paridad, int cantFichas){
         return null;
     }

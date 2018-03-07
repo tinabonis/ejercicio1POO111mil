@@ -7,7 +7,8 @@ public class Main extends MetodosSteve {
     public static void main(String[] args) {
         char operacion;
         do{
-            imprimir("Ingrese el codigo de la operacion:");
+            imprimirPanio();
+                    imprimir("Ingrese el codigo de la operacion:");
             operacion = tomarChar();
         }
         while(menuApuesta());
@@ -118,6 +119,35 @@ public class Main extends MetodosSteve {
     }
     
     public static void imprimirPanio(){
-        
+                imprimir ("|    " + " 0 " + "   |");
+                imprimir ("------------");
+                imprimir ("| 1|" + "| 2|" + "| 3|");
+                imprimir ("------------");
+                imprimir ("| 4|" + "| 5|" + "| 6|");
+                imprimir ("------------");
+                imprimir ("| 7|" + "| 8|" + "| 9|");
+                imprimir ("------------");
+                imprimir ("|10|" + "|11|" + "|12|");
+                imprimir ("------------");
+                imprimir ("|13|" + "|14|" + "|15|");
+                imprimir ("------------");
+                imprimir ("|16|" + "|17|" + "|18|");
+                imprimir ("------------");
+                imprimir ("|19|" + "|20|" + "|21|");
+                imprimir ("------------");
+                imprimir ("|22|" + "|23|" + "|24|");
+                imprimir ("------------");
+                imprimir ("|25|" + "|26|" + "|27|");
+                imprimir ("------------");
+                imprimir ("|28|" + "|29|" + "|30|");
+                imprimir ("------------");
+                imprimir ("|31|" + "|32|" + "|33|");
+                imprimir ("------------");
+                imprimir ("|34|" + "|35|" + "|36|");
+                imprimir ("------------");
+               
+                
+                
+     
     }
 }

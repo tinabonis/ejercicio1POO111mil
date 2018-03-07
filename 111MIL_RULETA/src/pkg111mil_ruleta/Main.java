@@ -70,7 +70,7 @@ public class Main extends MetodosSteve {
       
         int contadorNum[] = new int[12];
         contadorNum[1] = 0;
-        for (i = 2 ; i < 12 ; i++) {
+        for (i = 2 ; i < 13 ; i++) {
             contadorNum[i] = 2*(i - 1);
         }
         

@@ -61,7 +61,18 @@ public class Main extends MetodosSteve {
     }
     
     public static int[] apuestaLinea(int linea, int cantFichas){
-        return null;
+        int[] tablero = new int[37];
+        int posicionFinal=6, posicionInicial=1;
+        
+        for(int i=1; i<linea; i++){
+            posicionInicial = posicionInicial+3;
+            posicionFinal = posicionFinal+3;
+        }
+        
+        for(int i=posicionInicial; i<=posicionFinal; i++){
+            tablero[i] = 6*cantFichas;
+        }
+        return tablero;
     }
     
     public static int[] apuestaDocena(int docena, int cantFichas){

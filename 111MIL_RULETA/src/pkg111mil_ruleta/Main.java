@@ -42,35 +42,35 @@ public class Main extends MetodosSteve {
             do{
                 imprimir("ingrese cantidad de fichas a apostar:");
                 fichasJuego=tomarInt();
-            }while(fichasJuego<=0 && fichasJuego<fichas);
+            }while(fichasJuego<=0 || fichasJuego>fichas);
         
-        fichas=fichas-fichasJuego;
-        do{
-            imprimir("ingrese numero a jugar:");
-            numeroJuego=tomarInt();
-        }while(numeroJuego<=0 || numeroJuego>36 );
+            fichas=fichas-fichasJuego;
+            do{
+                imprimir("ingrese numero a jugar:");
+                numeroJuego=tomarInt();
+            }while(numeroJuego<=0 || numeroJuego>36 );
             apuestaPleno(numeroJuego, fichasJuego);
         }else if(jugada=='d'){
             do{
-            imprimir("ingrese cantidad de fichas a apostar:");
-            fichasJuego=tomarInt();
-            }while(fichasJuego<fichas);
+                imprimir("ingrese cantidad de fichas a apostar:");
+                fichasJuego=tomarInt();
+            }while(fichasJuego<=0 || fichasJuego>fichas);
             fichas=fichas-fichasJuego;
             do{
             imprimir("ingrese numero a jugar:");
             numeroJuego=tomarInt();
-        }while(numeroJuego<=0 || numeroJuego>36 );
+            }while(numeroJuego<=0 || numeroJuego>36 );
             do{
-            imprimir("ingrese el 2 numero a jugar:");
-            numerojuego2=tomarInt(); 
-        }while(numerojuego2<=0 || numerojuego2>36 && numerojuego2==numeroJuego);
+                imprimir("ingrese el 2 numero a jugar:");
+                numerojuego2=tomarInt(); 
+            }while(numerojuego2<=0 || numerojuego2>36 && numerojuego2==numeroJuego);
             apuestaDoble(numeroJuego, numerojuego2, fichasJuego);
         
         }else if(jugada=='c'){
             do{
             imprimir("ingrese cantidad de fichas a apostar:");
             fichasJuego=tomarInt();
-            }while(fichasJuego<fichas);
+            }while(fichasJuego<=0 || fichasJuego>fichas);
             fichas=fichas-fichasJuego;
             do{
                 imprimir("ingrese numero de calle a jugar:");
@@ -81,7 +81,7 @@ public class Main extends MetodosSteve {
              do{
                 imprimir("ingrese cantidad de fichas a apostar:");
                 fichasJuego=tomarInt();
-            }while(fichasJuego<fichas);
+            }while(fichasJuego<=0 || fichasJuego>fichas);
             fichas=fichas-fichasJuego;
             do{
                 imprimir("ingrese numero de esquina a jugar:");
@@ -92,7 +92,7 @@ public class Main extends MetodosSteve {
             do{
                 imprimir("ingrese cantidad de fichas a apostar:");
                 fichasJuego=tomarInt();
-            }while(fichasJuego<fichas);
+            }while(fichasJuego<=0 || fichasJuego>fichas);
             fichas=fichas-fichasJuego;
             do{
                 imprimir("ingrese numero de linea a jugar:");
@@ -103,7 +103,7 @@ public class Main extends MetodosSteve {
             do{
                 imprimir("ingrese cantidad de fichas a apostar:");
                 fichasJuego=tomarInt();
-            }while(fichasJuego<fichas);
+            }while(fichasJuego<=0 || fichasJuego>fichas);
             fichas=fichas-fichasJuego;
             do{
                 imprimir("ingrese numero de docena a jugar:");
@@ -114,7 +114,7 @@ public class Main extends MetodosSteve {
             do{
                 imprimir("ingrese cantidad de fichas a apostar:");
                 fichasJuego=tomarInt();
-            }while(fichasJuego<fichas);
+            }while(fichasJuego<=0 || fichasJuego>fichas);
             fichas=fichas-fichasJuego;
             do{
                 imprimir("ingrese numero de mitad a jugar:");
@@ -125,7 +125,7 @@ public class Main extends MetodosSteve {
             do{
                 imprimir("ingrese cantidad de fichas a apostar:");
                 fichasJuego=tomarInt();
-            }while(fichasJuego<fichas);
+            }while(fichasJuego<=0 || fichasJuego>fichas);
             fichas=fichas-fichasJuego;
             do{
                 imprimir("ingrese numero de columna a jugar:");
@@ -136,7 +136,7 @@ public class Main extends MetodosSteve {
             do{
                 imprimir("ingrese cantidad de fichas a apostar:");
                 fichasJuego=tomarInt();
-            }while(fichasJuego<fichas);
+            }while(fichasJuego<=0 || fichasJuego>fichas);
             fichas=fichas-fichasJuego;
             do{
                 imprimir("ingrese numero de juego 1 para impar o 2 para par:");

@@ -27,7 +27,7 @@ public class RPSTests extends TestCase{
         return Arrays.asList(new Object[][] {     
                  { 'r', 'r', 0 },{ 'p', 'p', 0 },{ 's', 's', 0 }
                 ,{ 'r', 's', 1 },{ 'p', 'r', 1 },{ 's', 'p', 1 }
-                ,{ 's', 'r', 2 },{ 'r', 's', 2 },{ 'p', 'r', 2 }
+                ,{ 's', 'r', 2 },{ 'r', 'p', 2 },{ 'p', 's', 2 }
            });
     }
     private char jugada1, jugada2;

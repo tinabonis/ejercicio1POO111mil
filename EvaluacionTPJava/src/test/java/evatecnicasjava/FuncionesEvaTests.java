@@ -28,5 +28,35 @@ public class FuncionesEvaTests extends TestCase{
         }));
     }
     
+    public void testPlazoFijo(){
+        assertEquals(120.0f, FuncionesEva.calculoGananciaPlazoFijo(100.0f, 12, 0.2f));
+    }
     
+    public void testIMC(){
+        assertEquals(31.25f, FuncionesEva.indiceDeMasaCorporal(80.0f, 1.6f));
+    }
+    
+    public void testEstadoNutri(){
+        assertEquals(2, FuncionesEva.estadoNutricionalOMS(27.5f));
+    }
+    
+    public void testEsBisiestoCuandoCutroyNoCienTrue(){
+        assertEquals(true, FuncionesEva.esBisiesto(2016));
+    }
+    
+    public void testEsBisiestoCuandoCutroyNoCienFalse(){
+        assertEquals(false, FuncionesEva.esBisiesto(200));
+    }
+    
+    public void testEsBisiestoCuandoCutroyNoCienFalse2(){
+        assertEquals(false, FuncionesEva.esBisiesto(300));
+    }
+    
+    public void testEsBisiestoCuandoCuatrocientos(){
+        assertEquals(true, FuncionesEva.esBisiesto(400));
+    }
+    
+    public void testEsBisiestoCuandoCuatrocientos2(){
+        assertEquals(true, FuncionesEva.esBisiesto(800));
+    }
 }

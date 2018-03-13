@@ -1,16 +1,18 @@
 package pkg111mil_ruleta;
 
+import java.util.Random;
+
 public class Main extends MetodosSteve {
     
     public static void main(String[] args) {
         char operacion;
         int fichas;
         do{
+            imprimirPanio();
             imprimir("Ingrese el codigo de la operacion, j para jugar o s para jugar un sola vez");
             operacion = tomarChar();
             fichas=menuPrincipal();
-            
-        }
+           }
         while(menuApuesta(operacion,fichas)==true);
         girarRuleta();
     }
@@ -195,7 +197,9 @@ public class Main extends MetodosSteve {
     }
     
     public static int girarRuleta(){
-        return -1;
+        Random rn = new Random();
+        int bola = rn.nextInt(37);
+        return bola;
     }
     
     public static int[] apuestaPleno(int numero, int cantFichas){
@@ -357,6 +361,35 @@ public class Main extends MetodosSteve {
     }
     
     public static void imprimirPanio(){
-        
+                imprimir ("|    " + " 0 " + "   |");
+                imprimir ("------------");
+                imprimir ("| 1|" + "| 2|" + "| 3|");
+                imprimir ("------------");
+                imprimir ("| 4|" + "| 5|" + "| 6|");
+                imprimir ("------------");
+                imprimir ("| 7|" + "| 8|" + "| 9|");
+                imprimir ("------------");
+                imprimir ("|10|" + "|11|" + "|12|");
+                imprimir ("------------");
+                imprimir ("|13|" + "|14|" + "|15|");
+                imprimir ("------------");
+                imprimir ("|16|" + "|17|" + "|18|");
+                imprimir ("------------");
+                imprimir ("|19|" + "|20|" + "|21|");
+                imprimir ("------------");
+                imprimir ("|22|" + "|23|" + "|24|");
+                imprimir ("------------");
+                imprimir ("|25|" + "|26|" + "|27|");
+                imprimir ("------------");
+                imprimir ("|28|" + "|29|" + "|30|");
+                imprimir ("------------");
+                imprimir ("|31|" + "|32|" + "|33|");
+                imprimir ("------------");
+                imprimir ("|34|" + "|35|" + "|36|");
+                imprimir ("------------");
+               
+                
+                
+     
     }
 }

@@ -38,9 +38,23 @@ public class Main extends MetodosSteve {
         imprimir("C- para apuesta columna:");
         imprimir("P- para apuesta par impar");
         jugada=tomarChar();
+        while(jugada!='p'&&jugada!='d'&&jugada!='c'&&jugada!='e'&&jugada!='l'&&jugada!='D'&&jugada!='M'&&jugada!='C'&&jugada!='P'){
+            imprimir("ingresaste una opcion invalida, intenta de nuevo:");
+            imprimir("ingrese la apuesta q desea hacer:");
+            imprimir("p- para apuesta pleno:");
+            imprimir("d- para apuesta doble:");
+            imprimir("c- para apuesta calle:");
+            imprimir("e- para apuesta esquina:");
+            imprimir("l- para apuesta linea:");
+            imprimir("D- para apuesta docena:");
+            imprimir("M- para apuesta mitad:");
+            imprimir("C- para apuesta columna:");
+            imprimir("P- para apuesta par impar");
+            jugada=tomarChar();
+        }
         if(jugada=='p'){
             do{
-                imprimir("ingrese cantidad de fichas a apostar:");
+                imprimir("ingrese cantidad de fichas a apostar, tienes disponibles "+fichas+" para apostar:");
                 fichasJuego=tomarInt();
             }while(fichasJuego<=0 || fichasJuego>fichas);
         
@@ -52,7 +66,7 @@ public class Main extends MetodosSteve {
             apuestaPleno(numeroJuego, fichasJuego);
         }else if(jugada=='d'){
             do{
-                imprimir("ingrese cantidad de fichas a apostar:");
+                imprimir("ingrese cantidad de fichas a apostar, tienes disponibles "+fichas+" para apostar:");
                 fichasJuego=tomarInt();
             }while(fichasJuego<=0 || fichasJuego>fichas);
             fichas=fichas-fichasJuego;
@@ -68,7 +82,7 @@ public class Main extends MetodosSteve {
         
         }else if(jugada=='c'){
             do{
-            imprimir("ingrese cantidad de fichas a apostar:");
+            imprimir("ingrese cantidad de fichas a apostar, tienes disponibles "+fichas+" para apostar:");
             fichasJuego=tomarInt();
             }while(fichasJuego<=0 || fichasJuego>fichas);
             fichas=fichas-fichasJuego;
@@ -79,7 +93,7 @@ public class Main extends MetodosSteve {
             apuestaCalle(numeroJuego, fichasJuego);
         }else if(jugada=='e'){
              do{
-                imprimir("ingrese cantidad de fichas a apostar:");
+                imprimir("ingrese cantidad de fichas a apostar, tienes disponibles "+fichas+" para apostar:");
                 fichasJuego=tomarInt();
             }while(fichasJuego<=0 || fichasJuego>fichas);
             fichas=fichas-fichasJuego;
@@ -90,7 +104,7 @@ public class Main extends MetodosSteve {
             apuestaEsquina(numeroJuego, fichasJuego);
         }else if(jugada=='l'){
             do{
-                imprimir("ingrese cantidad de fichas a apostar:");
+                imprimir("ingrese cantidad de fichas a apostar, tienes disponibles "+fichas+" cantiadad de fichas para apostar:");
                 fichasJuego=tomarInt();
             }while(fichasJuego<=0 || fichasJuego>fichas);
             fichas=fichas-fichasJuego;
@@ -101,7 +115,7 @@ public class Main extends MetodosSteve {
             apuestaLinea(numeroJuego, fichasJuego);
         }else if(jugada=='D'){
             do{
-                imprimir("ingrese cantidad de fichas a apostar:");
+                imprimir("ingrese cantidad de fichas a apostar, tienes disponibles "+fichas+" cantiadad de fichas para apostar:");
                 fichasJuego=tomarInt();
             }while(fichasJuego<=0 || fichasJuego>fichas);
             fichas=fichas-fichasJuego;
@@ -112,7 +126,7 @@ public class Main extends MetodosSteve {
             apuestaDocena(numeroJuego, fichasJuego);
         }else if(jugada=='M'){
             do{
-                imprimir("ingrese cantidad de fichas a apostar:");
+                imprimir("ingrese cantidad de fichas a apostar, tienes disponibles "+fichas+" cantiadad de fichas para apostar:");
                 fichasJuego=tomarInt();
             }while(fichasJuego<=0 || fichasJuego>fichas);
             fichas=fichas-fichasJuego;
@@ -123,7 +137,7 @@ public class Main extends MetodosSteve {
             apuestaMitad(numeroJuego, fichasJuego);
         }else if(jugada=='C'){
             do{
-                imprimir("ingrese cantidad de fichas a apostar:");
+                imprimir("ingrese cantidad de fichas a apostar, tienes disponibles "+fichas+" cantiadad de fichas para apostar:");
                 fichasJuego=tomarInt();
             }while(fichasJuego<=0 || fichasJuego>fichas);
             fichas=fichas-fichasJuego;
@@ -134,7 +148,7 @@ public class Main extends MetodosSteve {
             apuestaColumna(numeroJuego, fichasJuego);
         }else if(jugada=='P'){
             do{
-                imprimir("ingrese cantidad de fichas a apostar:");
+                imprimir("ingrese cantidad de fichas a apostar, tienes disponibles "+fichas+" cantiadad de fichas para apostar:");
                 fichasJuego=tomarInt();
             }while(fichasJuego<=0 || fichasJuego>fichas);
             fichas=fichas-fichasJuego;

@@ -45,7 +45,7 @@ public class Main extends MetodosSteve {
     
     public static int girarRuleta(){
         Random rn = new Random();
-        int bola = rn.nextInt(36);
+        int bola = rn.nextInt(37);
         return bola;
     }
     

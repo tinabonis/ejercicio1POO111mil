@@ -321,7 +321,8 @@ public class Main extends MetodosSteve {
      * @param cantFichas
      * @return 
      */
-    public static int[] apuestaMitad(int mitad, int cantFichas){
+    public static int[] apuestaMitad(int mitad, int cantFichas)
+    {
         int [] tablero=new int[37];
         int mitad1=1;
         int mitad2=2;
@@ -337,12 +338,18 @@ public class Main extends MetodosSteve {
                     tablero[i]=cantFichas*2;
                     }              
                 }
+        /*    
         for (int i = 0; i < 37; i++) {
                 imprimir(i+ " "+ tablero[i]);  
                 }
+                */
+    } else {
+            //imprimir("mitad incorrecta ");
+            }
+    return tablero;
     }
-     
-   
+  
+    
   public static int[] apuestaColumna(int columna, int cantFichas){
         return null;
     }

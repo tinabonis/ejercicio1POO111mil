@@ -3,14 +3,14 @@ package pkg111mil_ruleta;
 public class Main extends MetodosSteve {
     
     public static void main(String[] args) {
-        char operacion;
+       char operacion;
         do{
             imprimir("Ingrese el codigo de la operacion:");
             operacion = tomarChar();
         }
         while(menuApuesta());
     }
-    
+
     /**
      * Ofrece la posibilidad de jugar o salir
      * si inicia el juego toma la cantidad de dinero para 
@@ -45,7 +45,18 @@ public class Main extends MetodosSteve {
     }
     
     public static int[] apuestaPleno(int numero, int cantFichas){
-        return null;
+       int [] arregloPleno = new int[37];
+        for (int i=0;i<37;i++){
+            if(numero==0){
+                arregloPleno[0]=cantFichas*36;
+            }
+            else{
+            if(numero==i){
+                arregloPleno[i]=cantFichas*36;
+            }
+            }        
+        }
+        return arregloPleno;
     }
     
     public static int[] apuestaDoble(int numero1, int numero2, int cantFichas){
@@ -82,8 +93,29 @@ public class Main extends MetodosSteve {
         return null;
     }
     
+    /**
+     * esta funcion sirve para apostar calles en ruleta.
+     * @param calle valor admisible: 1 a 12
+     * @param cantFichas
+     * @return 
+     */
     public static int[] apuestaCalle(int calle, int cantFichas){
-        return null;
+        
+        int i = 0;
+        int apuestas[] = new int[37];
+        
+      
+        int contadorNum[] = new int[12];
+        contadorNum[1] = 0;
+        for (i = 2 ; i < 13 ; i++) {
+            contadorNum[i] = 2*(i - 1);
+        }
+        
+        for (i = calle + contadorNum[calle] ; i <= (calle + contadorNum[calle] + 2) ; i++ ) {
+            apuestas[i] = (12 * cantFichas);
+        }
+        
+        return apuestas;
     }
     
     public static int[] apuestaLinea(int linea, int cantFichas){
@@ -94,14 +126,65 @@ public class Main extends MetodosSteve {
         return null;
     }
     
+    /**
+     * Esta funciopn sirve para calcular las ganacias para una apuesta de mitad.
+     * @param mitad
+     * @param cantFichas
+     * @return 
+     */
     public static int[] apuestaMitad(int mitad, int cantFichas){
-        return null;
+        int [] tablero=new int[37];
+        int mitad1=1;
+        int mitad2=2;
+        if (mitad==1||mitad==2 ){ 
+               
+            if(mitad==mitad1){
+            for(int i = 1; i <19 ; i++){
+                tablero[i]=cantFichas*2;
+            }
+            }
+            else if(mitad==mitad2){
+                 for(int i = 19; i <37 ; i++){
+                tablero[i]=cantFichas*2;
+            }              
+        }
+        for (int i = 0; i < 37; i++) {
+                imprimir(i+ " "+ tablero[i]);  
+                }
     }
-    
+         else{
+             imprimir("mitad incorrecta ");
+            }
+    return tablero;
+    }
+   
     public static int[] apuestaParImpar(boolean paridad, int cantFichas){
-        return null;
-    }
+        int [] arregloParImpar = new int [37];
+            
+        if(paridad==true){
+                for (int j = 1; j < 37; j++) {
+                    if(j%2==0){
+                        arregloParImpar[j]=cantFichas*2;
+                    }
+                    else {
+                         arregloParImpar[j]=0;
+                    }
+                    
+                }
+            }
+        else{
+              for (int j = 1; j < 37; j++) {
+                    if(j%2==1){
+                        arregloParImpar[j]=cantFichas*2;
+                    }
+                    else {
+                         arregloParImpar[j]=0;
+                    }
+        }
+        }
+        return arregloParImpar;
     
+    }
     public static int calculoGanancia(int[] apuestas, int nroSorteado){
         return 0;
     }

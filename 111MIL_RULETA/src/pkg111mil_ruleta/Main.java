@@ -66,8 +66,29 @@ public class Main extends MetodosSteve {
         return null;
     }
     
+    /**
+     * esta funcion sirve para apostar calles en ruleta.
+     * @param calle valor admisible: 1 a 12
+     * @param cantFichas
+     * @return 
+     */
     public static int[] apuestaCalle(int calle, int cantFichas){
-        return null;
+        
+        int i = 0;
+        int apuestas[] = new int[37];
+        
+      
+        int contadorNum[] = new int[12];
+        contadorNum[1] = 0;
+        for (i = 2 ; i < 13 ; i++) {
+            contadorNum[i] = 2*(i - 1);
+        }
+        
+        for (i = calle + contadorNum[calle] ; i <= (calle + contadorNum[calle] + 2) ; i++ ) {
+            apuestas[i] = (12 * cantFichas);
+        }
+        
+        return apuestas;
     }
     
     public static int[] apuestaLinea(int linea, int cantFichas){

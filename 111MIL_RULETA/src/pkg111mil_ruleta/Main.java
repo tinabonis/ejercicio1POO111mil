@@ -381,9 +381,9 @@ public class Main extends MetodosSteve {
         return arregloParImpar;
     
     }
-
-      public static int calculoGanancia(int[] apuestas, int nroSorteado){
-        return 0;
+    
+    public static int calculoGanancia(int[] apuestas, int nroSorteado){
+        return apuestas[nroSorteado];
     }
     
     public static void imprimirPanio(){

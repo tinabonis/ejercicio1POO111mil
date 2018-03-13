@@ -348,10 +348,22 @@ public class Main extends MetodosSteve {
             }
     return tablero;
     }
-  
     
-  public static int[] apuestaColumna(int columna, int cantFichas){
-        return null;
+public static int[] apuestaColumna(int columna, int cantFichas)
+            
+    {
+        int []tablero = new int [37];
+        int pos;
+        
+        for(int i=0;i<12;i++)
+                {
+                   pos=columna;                   
+                   
+                   tablero[pos]=cantFichas; 
+                   
+                   columna=pos+3;
+                }
+        return tablero;
     }
   
     public static int[] apuestaParImpar(boolean paridad, int cantFichas){

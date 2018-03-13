@@ -249,8 +249,27 @@ public class Main extends MetodosSteve {
     }
     
     public static int[] apuestaEsquina(int esquina, int cantFichas){
-        return null;
-    }
+        int[] ganancia = new int[37];
+        for(int indice=0; indice<ganancia.length; indice++){
+            ganancia[indice]=indice;
+        }
+        if(esquina<12&&esquina>0){
+            ganancia[3+3*(esquina-1)]=8*cantFichas;
+            ganancia[6+3*(esquina-1)]=8*cantFichas;
+            ganancia[2+3*(esquina-1)]=8*cantFichas;
+            ganancia[5+3*(esquina-1)]=8*cantFichas;
+        }
+        else{
+            ganancia[2+3*(esquina-12)]=8*cantFichas;
+            ganancia[5+3*(esquina-12)]=8*cantFichas;
+            ganancia[1+3*(esquina-12)]=8*cantFichas;
+            ganancia[4+3*(esquina-12)]=8*cantFichas;
+            
+        }
+        return ganancia;
+        }
+        
+    
     
     /**
      * esta funcion sirve para apostar calles en ruleta.

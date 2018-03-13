@@ -181,7 +181,7 @@ public class Main extends MetodosSteve {
      */
     public static boolean menuApuesta(char cadena,int fichas ){ 
         while(cadena!='j'&&cadena!='s'){
-            imprimir("opcion erronea ingrese j para jugar o s para salir:");
+            imprimir("opcion erronea ingrese j para jugar y hacer varias apuestas o s para realizar una sola apuesta:");
             cadena=tomarChar();
         }
         if(cadena=='j'&& fichas>0){

@@ -25,7 +25,7 @@ public class Main extends MetodosSteve {
         int fichas;
         char jugada;
         int fichasJuego, numeroJuego, numerojuego2;
-        imprimir("ingresar dinero a apostar:");
+        imprimir("ingresar dinero a apostar si desea sumar a su cantidad de dinero actual, ponga 0 si no desea poner mas dinero:");
         fichas=tomarInt();
         imprimir("ingrese la apuesta q desea hacer:");
         imprimir("p- para apuesta pleno:");

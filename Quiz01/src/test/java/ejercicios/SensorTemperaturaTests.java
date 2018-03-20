@@ -27,9 +27,24 @@ public class SensorTemperaturaTests extends TestCase{
             public void write(int b) throws IOException { }
         }));
     }
-    
+    //    public static float[] quitarMuestrasErroneas(float[] muestrasSensor)
+
     public void testTiempoEstabilizacion(){
         float[] muestras = {30.0f, 18.0f, 15.0f, 15.3f};
         assertEquals(6, SensorTemperatura.tiempoDeEstabilizacion(muestras, 15));
     }
+
+        public void testQuitarMuestrasErroneas(){
+            boolean ok=true;
+        float[] muestras = {30.0f, 18.0f, 15.0f, 30.3f,50.0f, 10.0f, 30.0f};
+        float[] resultadoEsperado= {30.0f, 18.0f, 15.0f, 30.0f};
+        float[] resultadoObtenido=SensorTemperatura.quitarMuestrasErroneas(muestras);
+            for (int i = 0; i < resultadoEsperado.length; i++) {
+               if(resultadoEsperado[i]!=resultadoObtenido[i]){
+                   ok=false;
+               }     
+            }
+        assertEquals(ok,true);
+    }
+
 }

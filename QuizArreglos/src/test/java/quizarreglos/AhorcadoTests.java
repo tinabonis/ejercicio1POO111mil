@@ -49,7 +49,7 @@ public class AhorcadoTests extends TestCase{
     }
     
     public void testValidarJugadaCuandoNoLePega(){
-        char[] jugadaAnterior = {'_','0','_','0'};
+        char[] jugadaAnterior = {'_','O','_','O'};
         char[] jugadaNueva = {'_','O','_','O'};
         assertTrue(!Ahorcado.validarJugada(jugadaAnterior, jugadaNueva));
     }

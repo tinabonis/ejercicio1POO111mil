@@ -11,9 +11,22 @@ package quizarreglos;
  */
 public class Ahorcado {
     public static char[] resultadoJugada(char[] palabraOriginal, char letra){
-        return null;
+        char[] resultadoJugada = new char[palabraOriginal.length];
+        for(int indice=0; indice<resultadoJugada.length; indice++){
+            resultadoJugada[indice]='_';
+            if(palabraOriginal[indice]==letra){
+                resultadoJugada[indice]=letra;
+            }
+        } 
+        return resultadoJugada;
     }
     public static boolean validarJugada(char[] jugadasAnteriores, char[] nuevaJugada){
+        for(int i=0; i<jugadasAnteriores.length; i++){
+            if(jugadasAnteriores[i]=='_'&&nuevaJugada[i]!='_'){
+                return true;
+                
+            }
+        }
         return false;
     }
 }
